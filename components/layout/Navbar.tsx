@@ -73,6 +73,12 @@ export default function Navbar() {
             >
               ABOUT US
             </Link>
+            <Link
+              href="/faq"
+              className="text-xs font-bold uppercase tracking-wider text-gray-muted hover:text-white transition-colors"
+            >
+              FAQS
+            </Link>
           </nav>
 
           {/* Desktop CTA: Instagram on Left of WhatsApp */}
@@ -122,6 +128,14 @@ export default function Navbar() {
               className="text-base font-bold uppercase tracking-wider text-white hover:text-accent-primary flex items-center justify-between"
             >
               <span>ABOUT US</span>
+              <ArrowRight className="w-4 h-4 text-gray-muted" />
+            </Link>
+            <Link
+              href="/faq"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-base font-bold uppercase tracking-wider text-white hover:text-accent-primary flex items-center justify-between"
+            >
+              <span>FAQS</span>
               <ArrowRight className="w-4 h-4 text-gray-muted" />
             </Link>
 

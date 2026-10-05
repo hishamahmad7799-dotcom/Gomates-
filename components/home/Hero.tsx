@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { ArrowDown, Compass } from 'lucide-react'
-import WhatsAppButton from '@/components/shared/WhatsAppButton'
-import InstagramButton from '@/components/shared/InstagramButton'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowDown, Compass } from "lucide-react";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
+import InstagramButton from "@/components/shared/InstagramButton";
 
 export default function Hero() {
   return (
@@ -19,8 +19,8 @@ export default function Hero() {
           transition={{
             duration: 20,
             repeat: Infinity,
-            repeatType: 'reverse',
-            ease: 'linear',
+            repeatType: "reverse",
+            ease: "linear",
           }}
           className="relative w-full h-full"
         >
@@ -56,7 +56,9 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="max-w-2xl mx-auto text-base sm:text-xl text-gray-300 font-normal leading-relaxed mb-10">
-          Discover curated group adventures across India’s rawest landscapes, ancient cultures, and hidden mountain trails with like-minded travelers.
+          Discover curated group adventures across India’s rawest landscapes,
+          ancient cultures, and hidden mountain trails with like-minded
+          travelers.
         </p>
 
         {/* Call-to-Action Buttons */}
@@ -69,7 +71,12 @@ export default function Hero() {
             <ArrowDown className="w-5 h-5 animate-bounce" />
           </Link>
           <div className="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-center">
-            <InstagramButton text="Instagram" size="lg" variant="outline" className="flex-1 sm:flex-initial justify-center" />
+            <InstagramButton
+              text="Instagram"
+              size="lg"
+              variant="outline"
+              className="flex-1 sm:flex-initial justify-center"
+            />
             <WhatsAppButton
               text="WhatsApp"
               size="lg"
@@ -80,5 +87,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

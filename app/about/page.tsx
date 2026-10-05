@@ -9,6 +9,7 @@ import WhatsAppButton from '@/components/shared/WhatsAppButton'
 
 export const metadata: Metadata = {
   title: `ABOUT US  | ${siteConfig.name}`,
+  
   description: `Learn about ${siteConfig.name} - Curated small-group travel company crafting authentic adventures across India.`,
 }
 

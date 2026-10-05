@@ -63,7 +63,7 @@ export default async function TripDetailPage({ params }: TripPageProps) {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 glass-nav border-t border-dark-border px-4 py-3 flex items-center justify-between shadow-2xl">
         <div>
           <span className="block text-[10px] uppercase font-bold text-gray-400">Total Price</span>
-          <span className="text-lg font-black text-white">{trip.formattedPrice}</span>
+          <span className="text-sm font-black text-accent-primary">{trip.formattedPrice}</span>
         </div>
         <div className="flex items-center gap-2">
           <InstagramButton size="sm" variant="outline" text="Instagram" />

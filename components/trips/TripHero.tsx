@@ -1,15 +1,22 @@
-'use client'
+"use client";
 
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Calendar, Clock, MapPin, Users, ArrowLeft, ShieldCheck } from 'lucide-react'
-import { Trip } from '@/types/trip'
-import WhatsAppButton from '@/components/shared/WhatsAppButton'
-import InstagramButton from '@/components/shared/InstagramButton'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Users,
+  ArrowLeft,
+  ShieldCheck,
+} from "lucide-react";
+import { Trip } from "@/types/trip";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
+import InstagramButton from "@/components/shared/InstagramButton";
 
 interface TripHeroProps {
-  trip: Trip
+  trip: Trip;
 }
 
 export default function TripHero({ trip }: TripHeroProps) {
@@ -59,11 +66,17 @@ export default function TripHero({ trip }: TripHeroProps) {
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-accent-primary shrink-0" />
-                <span className="font-semibold text-white">{trip.location}</span>
+                <span className="font-semibold text-white">
+                  {trip.location}
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-accent-primary shrink-0" />
-                <span>{trip.startDate} – {trip.endDate}</span>
+                <span>
+                  {trip.startDate === "To be announced"
+                    ? "Dates: To be announced"
+                    : `${trip.startDate} – ${trip.endDate}`}
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-accent-primary shrink-0" />
@@ -83,10 +96,12 @@ export default function TripHero({ trip }: TripHeroProps) {
                 All-Inclusive Trip Fare
               </span>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl sm:text-4xl font-black text-white">
+                <span className="text-2xl sm:text-3xl font-black text-accent-primary">
                   {trip.formattedPrice}
                 </span>
-                <span className="text-sm text-gray-400">/ person</span>
+                {trip.formattedPrice !== "To be announced" && (
+                  <span className="text-sm text-gray-400"></span>
+                )}
               </div>
             </div>
 
@@ -102,7 +117,12 @@ export default function TripHero({ trip }: TripHeroProps) {
             </div>
 
             <div className="flex items-center gap-2.5">
-              <InstagramButton size="md" variant="outline" text="Instagram" className="flex-1 justify-center" />
+              <InstagramButton
+                size="md"
+                variant="outline"
+                text="Instagram"
+                className="flex-1 justify-center"
+              />
               <WhatsAppButton
                 tripName={trip.name}
                 text="WhatsApp"
@@ -115,5 +135,5 @@ export default function TripHero({ trip }: TripHeroProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }

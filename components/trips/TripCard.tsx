@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Calendar, Clock, MapPin, ArrowRight, Users } from 'lucide-react'
-import { Trip } from '@/types/trip'
-import WhatsAppButton from '@/components/shared/WhatsAppButton'
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Calendar, Clock, MapPin, ArrowRight, Users } from "lucide-react";
+import { Trip } from "@/types/trip";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 
 interface TripCardProps {
-  trip: Trip
+  trip: Trip;
 }
 
 export default function TripCard({ trip }: TripCardProps) {
@@ -48,9 +48,7 @@ export default function TripCard({ trip }: TripCardProps) {
       <div className="p-4 sm:p-6 flex flex-col flex-grow">
         {/* Title */}
         <h3 className="text-base sm:text-xl font-bold text-white group-hover:text-accent-primary transition-colors line-clamp-1 mb-1.5 sm:mb-2">
-          <Link href={`/trips/${trip.slug}`}>
-            {trip.name}
-          </Link>
+          <Link href={`/trips/${trip.slug}`}>{trip.name}</Link>
         </h3>
 
         {/* Short Description */}
@@ -62,7 +60,11 @@ export default function TripCard({ trip }: TripCardProps) {
         <div className="grid grid-cols-2 gap-2 sm:gap-3 py-2.5 px-3 sm:py-3 sm:px-3.5 mb-4 sm:mb-6 rounded-xl bg-dark-bg/70 border border-dark-border text-[11px] sm:text-xs text-gray-300">
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4 text-accent-primary shrink-0" />
-            <span className="truncate">{trip.startDate}</span>
+            <span className="truncate">
+              {trip.startDate === "To be announced"
+                ? "Dates: TBA"
+                : trip.startDate}
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-accent-primary shrink-0" />
@@ -77,10 +79,14 @@ export default function TripCard({ trip }: TripCardProps) {
         {/* Price & Action Row */}
         <div className="mt-auto pt-4 border-t border-dark-border flex items-center justify-between gap-3">
           <div>
-            <span className="block text-[10px] uppercase font-bold tracking-wider text-gray-muted">Starting From</span>
-            <span className="text-xl font-extrabold text-white">
+            <span className="block text-[10px] uppercase font-bold tracking-wider text-gray-muted">
+              Trip Fare
+            </span>
+            <span className="text-sm sm:text-base font-extrabold text-accent-primary">
               {trip.formattedPrice}
-              <span className="text-xs font-normal text-gray-400"> /person</span>
+              {trip.formattedPrice !== "To be announced" && (
+                <span className="text-xs font-normal text-gray-400"> </span>
+              )}
             </span>
           </div>
 
@@ -96,5 +102,5 @@ export default function TripCard({ trip }: TripCardProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

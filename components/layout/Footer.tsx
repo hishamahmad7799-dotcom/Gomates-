@@ -27,7 +27,7 @@ export default function Footer() {
         </p>
 
         {/* Horizontal Navigation Links */}
-        <nav className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm font-bold tracking-wider text-white uppercase mb-10">
+        <nav className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm font-bold tracking-wider text-white uppercase mb-8">
           <Link href="/" className="hover:text-accent-primary transition-colors">
             HOME
           </Link>
@@ -40,7 +40,21 @@ export default function Footer() {
           <Link href="/#gallery" className="hover:text-accent-primary transition-colors">
             GALLERY
           </Link>
+          <Link href="/faq" className="hover:text-accent-primary transition-colors">
+            FAQS
+          </Link>
         </nav>
+
+        {/* Policy Quick Links */}
+        <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400 mb-8">
+          <Link href="/privacy-policy" className="hover:text-accent-primary transition-colors">
+            Privacy Policy
+          </Link>
+          <span>•</span>
+          <Link href="/cancellation-policy" className="hover:text-accent-primary transition-colors">
+            Cancellation Policy
+          </Link>
+        </div>
 
         {/* Divider */}
         <div className="w-full max-w-4xl border-t border-dark-border/60 mb-6" />
