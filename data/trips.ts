@@ -2,15 +2,15 @@ import { Trip } from "@/types/trip";
 
 export const TRIPS_DATA: Trip[] = [
   {
-    id: "jibhi-tirthan-shoja-shimla-2026",
-    slug: "jibhi-tirthan-shoja-shimla",
-    name: "Jibhi, Tirthan Valley, Shoja & Shimla Trail",
-    location: "Jibhi, Tirthan Valley, Shoja & Shimla, Himachal Pradesh",
+    id: "jibhi-tirthan-shoja-shangarh-2026",
+    slug: "jibhi-tirthan-shoja-shangarh",
+    name: "Jibhi, Tirthan Valley, Shoja & Shangarh",
+    location: "Jibhi, Tirthan Valley, Shoja & Shangarh, Himachal Pradesh",
     state: "Himachal Pradesh",
     shortDescription:
-      "Discover cozy wooden hamlets in Jibhi, Tirthan river valley, Jalori Pass trek, and Shimla Mall Road & Ridge.",
+      "Discover cozy wooden hamlets in Jibhi, Tirthan river valley, Jalori Pass trek, and Meadows & Mountains.",
     description:
-      "Escape into the serene green pine forests of Tirthan Valley and Banjar. Walk across wooden bridges in Jibhi, trek to crystal-clear Serolsar Lake via Jalori Pass (10,800 ft), stay in cozy wooden cottages, and explore the iconic Ridge and Mall Road of Shimla.",
+      "Escape into the serene green pine forests of Tirthan Valley and Banjar. Walk across wooden bridges in Jibhi, trek to crystal-clear Serolsar Lake via Jalori Pass (10,800 ft), stay in cozy wooden cottages, and explore the iconic Ridge and Meadows & Mountains.",
     startDate: "Coming Soon",
     endDate: "-",
     duration: "3 Nights • 4 Days",
@@ -34,43 +34,44 @@ export const TRIPS_DATA: Trip[] = [
       "Trek to Serolsar Lake via Jalori Pass (10,800 ft)",
       "Hidden Jibhi Waterfall & wooden bridge river trail",
       "Riverside cottage stay in Tirthan Valley",
-      "Walkthrough of historic Shimla Ridge & Christ Church",
-      "Kufri & Narkanda mountain view trail",
+      "Explore Shangarh’s lush green meadows, ancient temples & serene Himalayan forests.",
+      
     ],
     itinerary: [
       {
         day: 1,
-        title: "Aligarh to Jibhi Overnight Drive & Arrival",
+        title: "Okay Tadaa Byee Aligarh!",
         description:
-          "Overnight drive from Aligarh in a comfortable Urbania Traveler. Arrive in Jibhi by morning. Check into a wooden riverside homestay, explore Jibhi Waterfall and local pine forest trails.",
-        location: "Jibhi",
-        stay: "Riverside Wooden Cottage in Jibhi",
+          "Overnight drive from Aligarh in a comfortable Urbania Traveler. Arrive in Shangarh by morning. Check into a Homestay , Explore Shangarh’s lush green meadows, ancient temples & serene Himalayan forests..",
+        location: "Shangarh",
+        stay: " homestay/hotel/camps in Shangarh ",
         mealsIncluded: "Dinner",
       },
       {
         day: 2,
-        title: "Jalori Pass & Serolsar Lake Trek",
+        title: "Reach Tirthan Valley",
         description:
-          "Drive up to Jalori Pass (10,800 ft). Begin a scenic 5km forest trek to Serolsar Lake. Visit the sacred Buddhi Nagin Temple and enjoy lunch overlooking oak forests.",
-        location: "Shoja / Jalori Pass",
+          "Check-in to our homestay/hotel/camps and enjoy the view, Later leave for a small jungle trail to Jibhi waterfall, Mini Thailand and cafes..",
+        location: "Shoja / Jibhi",
         stay: "Riverside Wooden Cottage in Jibhi",
         mealsIncluded: "Breakfast, Dinner",
       },
       {
         day: 3,
-        title: "Jibhi & Tirthan Valley Riverside Trail",
+        title: "Jalori and Raghupur Fort",
+      
         description:
-          "Morning walk along the crystalline Tirthan river. Explore local wooden hamlets, trout streams, and pine forest viewpoints.",
-        location: "Tirthan Valley",
+          "Good morning Peeps! It’s Raghupur Fort day trek..",
+        location: "Jalori Pass ",
         stay: "Riverside Wooden Cottage in Jibhi",
         mealsIncluded: "Breakfast, Dinner",
       },
       {
         day: 4,
-        title: "Drive to Shimla, Ridge Stroll & Return to Aligarh",
+        title: "Return to Aligarh",
         description:
-          "Scenic morning drive down towards Shimla. Stroll through iconic Mall Road, historic Christ Church and Ridge promenade before overnight return journey to Aligarh.",
-        location: "Shimla / Aligarh Drop off",
+          "Bye Guys! Vaada karo milte rahoge and touch mein rahoge..",
+        location: " Aligarh Drop off",
         stay: "N/A",
         mealsIncluded: "Breakfast",
       },
