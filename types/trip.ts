@@ -13,6 +13,12 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface CostingItem {
+  roomSharing: string;
+  costPerPerson: string;
+  advanceToBook: string;
+}
+
 export interface Trip {
   id: string;
   slug: string;
@@ -40,6 +46,7 @@ export interface Trip {
   difficulty: 'Easy' | 'Easy-Moderate' | 'Moderate' | 'Challenging';
   featured?: boolean;
   isUpcoming: boolean;
+  costing?: CostingItem[];
 }
 
 export interface SiteConfig {

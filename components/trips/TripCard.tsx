@@ -80,7 +80,7 @@ export default function TripCard({ trip }: TripCardProps) {
         <div className="mt-auto pt-4 border-t border-dark-border flex items-center justify-between gap-3">
           <div>
             <span className="block text-[10px] uppercase font-bold tracking-wider text-gray-muted">
-              Trip Fare
+              Starting from
             </span>
             <span className="text-sm sm:text-base font-extrabold text-accent-primary">
               {trip.formattedPrice}

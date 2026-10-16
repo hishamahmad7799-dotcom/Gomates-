@@ -22,6 +22,23 @@ export const TRIPS_DATA: Trip[] = [
     difficulty: "Easy-Moderate",
     featured: true,
     isUpcoming: true,
+    costing: [
+      {
+        roomSharing: "Quad Sharing",
+        costPerPerson: "Coming Soon",
+        advanceToBook: "Coming Soon",
+      },
+      {
+        roomSharing: "Triple Sharing",
+        costPerPerson: "Coming Soon",
+        advanceToBook: "Coming Soon",
+      },
+      {
+        roomSharing: "Twin Sharing",
+        costPerPerson: "Coming Soon",
+        advanceToBook: "Coming Soon",
+      },
+    ],
     coverImage: "/images/jibhi/jibhi-11.jpg",
     gallery: [
       "/images/jibhi/jibhi-1.jpg",
@@ -125,6 +142,23 @@ export const TRIPS_DATA: Trip[] = [
     difficulty: "Easy",
     featured: true,
     isUpcoming: true,
+    costing: [
+      {
+        roomSharing: "Quad Sharing",
+        costPerPerson: "Coming Soon",
+        advanceToBook: "Coming Soon",
+      },
+      {
+        roomSharing: "Triple Sharing",
+        costPerPerson: "Coming Soon",
+        advanceToBook: "Coming Soon",
+      },
+      {
+        roomSharing: "Twin Sharing",
+        costPerPerson: "Coming Soon",
+        advanceToBook: "Coming Soon",
+      },
+    ],
     coverImage:
       "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80",
     gallery: [
@@ -229,6 +263,23 @@ export const TRIPS_DATA: Trip[] = [
     difficulty: "Moderate",
     featured: true,
     isUpcoming: true,
+    costing: [
+      {
+        roomSharing: "Quad Sharing",
+        costPerPerson: "Coming Soon",
+        advanceToBook: "Coming Soon",
+      },
+      {
+        roomSharing: "Triple Sharing",
+        costPerPerson: "Coming Soon",
+        advanceToBook: "Coming Soon",
+      },
+      {
+        roomSharing: "Twin Sharing",
+        costPerPerson: "Coming Soon",
+        advanceToBook: "Coming Soon",
+      },
+    ],
     coverImage: "/images/jibhi/jibhi-1.jpg",
     gallery: [
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
