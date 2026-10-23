@@ -13,12 +13,12 @@ export const TRIPS_DATA: Trip[] = [
       "Escape into the serene green pine forests of Tirthan Valley and Banjar. Walk across wooden bridges in Jibhi, trek to crystal-clear Serolsar Lake via Jalori Pass (10,800 ft), stay in cozy wooden cottages, and explore the iconic Ridge and Meadows & Mountains.",
     startDate: "Coming Soon",
     endDate: "-",
-    duration: "3 Nights • 4 Days",
+    duration: "2 Nights • 3 Days",
     price: 8499,
     formattedPrice: "Coming Soon",
     currency: "INR",
     category: "Valley & Forest Trail",
-    groupSize: "12-15 Gomates",
+    groupSize: "12-16  Gomates",
     difficulty: "Easy-Moderate",
     featured: true,
     isUpcoming: true,
@@ -62,29 +62,29 @@ export const TRIPS_DATA: Trip[] = [
           "Overnight drive from Aligarh in a comfortable Urbania Traveler. Arrive in Shangarh by morning. Check into a Homestay , Explore Shangarh’s lush green meadows, ancient temples & serene Himalayan forests..",
         location: "Shangarh",
         stay: " homestay/hotel/camps in Shangarh ",
-        mealsIncluded: "Dinner",
+        mealsIncluded: " Breakfast, Dinner",
       },
+      // {
+      //   day: 2,
+      //   title: "Reach Tirthan Valley",
+      //   description:
+      //     "Check-in to our homestay/hotel/camps and enjoy the view, Later leave for a small jungle trail to Jibhi waterfall, Mini Thailand and cafes..",
+      //   location: "Shoja / Jibhi",
+      //   stay: "Riverside Wooden Cottage in Jibhi",
+      //   mealsIncluded: "Breakfast, Dinner",
+      // },
       {
         day: 2,
-        title: "Reach Tirthan Valley",
-        description:
-          "Check-in to our homestay/hotel/camps and enjoy the view, Later leave for a small jungle trail to Jibhi waterfall, Mini Thailand and cafes..",
-        location: "Shoja / Jibhi",
-        stay: "Riverside Wooden Cottage in Jibhi",
-        mealsIncluded: "Breakfast, Dinner",
-      },
-      {
-        day: 3,
-        title: "Jalori and Raghupur Fort",
+        title: " jibhi - Jalori and Raghupur Fort trek ",
       
         description:
-          "Good morning Peeps! It’s Raghupur Fort day trek..",
+          "Good morning Peeps! It’s Raghupur Fort day trek.",
         location: "Jalori Pass ",
         stay: "Riverside Wooden Cottage in Jibhi",
         mealsIncluded: "Breakfast, Dinner",
       },
       {
-        day: 4,
+        day: 3,
         title: "Return to Aligarh",
         description:
           "Bye Guys! Vaada karo milte rahoge and touch mein rahoge..",
@@ -95,8 +95,9 @@ export const TRIPS_DATA: Trip[] = [
     ],
     included: [
       "Aligarh to Aligarh transportation in AC Urbania Traveler / SUV",
-      "3 Nights stay in Wooden Cottages & Hotels",
-      "4 Breakfasts & 3 Dinners",
+      "Accommodation for 2 nights 1 Night Shangarh + 1 Night Jibhi",
+      "Meals – 03 Breakfasts & 02 Dinners",
+      "Quad / Twin / Triple sharing accommodation",
       "Guided trek to Serolsar Lake & Jalori Pass",
       "Trip Captain assistance throughout",
       "Tolls, driver charges & parking fees",
@@ -104,7 +105,8 @@ export const TRIPS_DATA: Trip[] = [
     excluded: [
       "Lunches & personal café orders",
       "Personal shopping & adventure activities",
-      "GST 5%",
+      "Medical expenses and travel insurance",
+      "Expenses arising due to weather conditions, landslides, roadblocks or unforeseen circumstances",
     ],
     faqs: [
       {
