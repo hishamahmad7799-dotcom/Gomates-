@@ -1,19 +1,69 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Calendar, MapPin, BedDouble, Utensils, ChevronDown, ChevronUp } from 'lucide-react'
-import { Trip } from '@/types/trip'
+import { MapPin, BedDouble, Utensils, ChevronDown, ChevronUp } from 'lucide-react'
+import { Trip, ItineraryItem } from '@/types/trip'
 
 interface ItineraryProps {
   trip: Trip
 }
 
+/**
+ * Extracts clean bullet points from an itinerary item.
+ * Supports explicit `points` array, newline-delimited descriptions,
+ * bullet-delimited text, or sentence-based fallback.
+ */
+function getItineraryPoints(item: ItineraryItem): string[] {
+  if (item.points && item.points.length > 0) {
+    return item.points
+  }
+
+  if (!item.description) return []
+
+  // Check if description has newlines
+  if (item.description.includes('\n')) {
+    return item.description
+      .split('\n')
+      .map((line) => line.trim().replace(/^([•\-\*]|\d+\.)\s*/, ''))
+      .filter((line) => line.length > 0)
+  }
+
+  // Check if description has bullet characters like •
+  if (item.description.includes('•')) {
+    return item.description
+      .split('•')
+      .map((s) => s.trim())
+      .filter((s) => s.length > 0)
+  }
+
+  // If description has multiple sentences, split cleanly into points
+  const sentences = item.description
+    .split(/(?<=[.?!])\s+(?=[A-Z0-9])/)
+    .map((s) => s.trim().replace(/^([•\-\*]|\d+\.)\s*/, ''))
+    .filter((s) => s.length > 0)
+
+  if (sentences.length > 1) {
+    return sentences
+  }
+
+  return [item.description.trim()]
+}
+
 export default function Itinerary({ trip }: ItineraryProps) {
-  // Allow expanding/collapsing all or specific days
-  const [expandedDays, setExpandedDays] = useState<Record<number, boolean>>({
-    1: true,
-    2: true,
+  // Expand first two days by default, or Day 0 & Day 1
+  const [expandedDays, setExpandedDays] = useState<Record<number, boolean>>(() => {
+    const initial: Record<number, boolean> = {}
+    trip.itinerary.forEach((item, index) => {
+      if (index < 2) {
+        initial[item.day] = true
+      }
+    })
+    return initial
   })
+
+  const areAllExpanded =
+    trip.itinerary.length > 0 &&
+    trip.itinerary.every((item) => expandedDays[item.day])
 
   const toggleDay = (dayNum: number) => {
     setExpandedDays((prev) => ({
@@ -22,12 +72,16 @@ export default function Itinerary({ trip }: ItineraryProps) {
     }))
   }
 
-  const expandAll = () => {
-    const allExpanded: Record<number, boolean> = {}
-    trip.itinerary.forEach((item) => {
-      allExpanded[item.day] = true
-    })
-    setExpandedDays(allExpanded)
+  const toggleAll = () => {
+    if (areAllExpanded) {
+      setExpandedDays({})
+    } else {
+      const allExpanded: Record<number, boolean> = {}
+      trip.itinerary.forEach((item) => {
+        allExpanded[item.day] = true
+      })
+      setExpandedDays(allExpanded)
+    }
   }
 
   return (
@@ -44,10 +98,10 @@ export default function Itinerary({ trip }: ItineraryProps) {
           </div>
 
           <button
-            onClick={expandAll}
+            onClick={toggleAll}
             className="text-xs font-bold uppercase tracking-wider text-accent-primary hover:text-accent-secondary transition-colors underline underline-offset-4"
           >
-            Expand All Days
+            {areAllExpanded ? 'Collapse All Days' : 'Expand All Days'}
           </button>
         </div>
 
@@ -55,27 +109,28 @@ export default function Itinerary({ trip }: ItineraryProps) {
         <div className="relative border-l-2 border-dark-border ml-4 sm:ml-8 space-y-8">
           {trip.itinerary.map((item) => {
             const isExpanded = expandedDays[item.day] ?? false
+            const points = getItineraryPoints(item)
 
             return (
               <div key={item.day} className="relative pl-6 sm:pl-10 group">
                 {/* Timeline Dot */}
-                <div className="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-dark-bg border-2 border-accent-primary flex items-center justify-center text-xs font-bold text-accent-primary group-hover:scale-110 group-hover:bg-accent-primary group-hover:text-white transition-all shadow-glow-accent">
+                <div className="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-dark-bg border-2 border-accent-primary flex items-center justify-center text-xs font-bold text-accent-primary group-hover:scale-110 group-hover:bg-accent-primary group-hover:text-white transition-all shadow-glow-accent select-none">
                   {item.day}
                 </div>
 
                 {/* Day Card */}
-                <div className="glass-panel rounded-2xl border border-dark-border overflow-hidden transition-all duration-300">
+                <div className="glass-panel rounded-2xl border border-dark-border overflow-hidden transition-all duration-300 hover:border-dark-borderHover">
                   {/* Card Header (Click to Toggle) */}
                   <div
                     onClick={() => toggleDay(item.day)}
-                    className="p-5 sm:p-6 flex items-center justify-between cursor-pointer hover:bg-dark-elevated/80 transition-colors"
+                    className="p-5 sm:p-6 flex items-center justify-between cursor-pointer hover:bg-dark-elevated/80 transition-colors select-none"
                   >
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wider text-accent-primary block mb-1">
                         DAY {item.day.toString().padStart(2, '0')}
                       </span>
                       <h3 className="text-lg sm:text-xl font-bold text-white leading-snug">
-                        {item.title}
+                        {item.title.trim()}
                       </h3>
                     </div>
 
@@ -90,30 +145,77 @@ export default function Itinerary({ trip }: ItineraryProps) {
 
                   {/* Card Body */}
                   {isExpanded && (
-                    <div className="px-5 pb-6 sm:px-6 sm:pb-6 pt-2 border-t border-dark-border/60 text-sm text-gray-300 space-y-4 animate-fadeIn">
-                      <p className="leading-relaxed">{item.description}</p>
+                    <div className="px-5 pb-6 sm:px-6 sm:pb-6 pt-2 border-t border-dark-border/60 space-y-5 animate-fadeIn">
+                      {/* Optional Lead Description if separate from points */}
+                      {item.description && item.points && item.points.length > 0 && (
+                        <p className="text-sm text-gray-300 leading-relaxed font-normal">
+                          {item.description}
+                        </p>
+                      )}
+
+                      {/* Professional Bullet Points */}
+                      {points.length > 0 ? (
+                        <ul className="space-y-3 pt-1">
+                          {points.map((point, idx) => (
+                            <li
+                              key={idx}
+                              className="flex items-start gap-3 group/item"
+                            >
+                              <div className="w-5 h-5 rounded-full bg-accent-primary/10 border border-accent-primary/30 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:border-accent-primary transition-colors">
+                                <div className="w-1.5 h-1.5 rounded-full bg-accent-primary group-hover/item:scale-125 transition-transform" />
+                              </div>
+                              <span className="text-sm text-gray-200 leading-relaxed group-hover/item:text-white transition-colors">
+                                {point}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        item.description && (
+                          <p className="text-sm text-gray-300 leading-relaxed">
+                            {item.description}
+                          </p>
+                        )
+                      )}
 
                       {/* Stay & Meals Pills */}
-                      <div className="flex flex-wrap gap-4 pt-3 border-t border-dark-border/40 text-xs text-gray-400">
-                        {item.location && (
-                          <div className="flex items-center gap-1.5">
-                            <MapPin className="w-3.5 h-3.5 text-accent-primary" />
-                            <span>Location: <strong className="text-white font-medium">{item.location}</strong></span>
-                          </div>
-                        )}
-                        {item.stay && (
-                          <div className="flex items-center gap-1.5">
-                            <BedDouble className="w-3.5 h-3.5 text-accent-secondary" />
-                            <span>Stay: <strong className="text-white font-medium">{item.stay}</strong></span>
-                          </div>
-                        )}
-                        {item.mealsIncluded && (
-                          <div className="flex items-center gap-1.5">
-                            <Utensils className="w-3.5 h-3.5 text-emerald-400" />
-                            <span>Meals: <strong className="text-white font-medium">{item.mealsIncluded}</strong></span>
-                          </div>
-                        )}
-                      </div>
+                      {(item.location || item.stay || item.mealsIncluded) && (
+                        <div className="flex flex-wrap gap-2.5 pt-4 border-t border-dark-border/50 text-xs">
+                          {item.location && item.location.trim().toLowerCase() !== 'n/a' && (
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-bg/80 border border-dark-border/70 text-gray-400">
+                              <MapPin className="w-3.5 h-3.5 text-accent-primary shrink-0" />
+                              <span>
+                                Location:{' '}
+                                <strong className="text-white font-medium">
+                                  {item.location.trim()}
+                                </strong>
+                              </span>
+                            </div>
+                          )}
+                          {item.stay && item.stay.trim().toLowerCase() !== 'n/a' && (
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-bg/80 border border-dark-border/70 text-gray-400">
+                              <BedDouble className="w-3.5 h-3.5 text-accent-secondary shrink-0" />
+                              <span>
+                                Stay:{' '}
+                                <strong className="text-white font-medium">
+                                  {item.stay.trim()}
+                                </strong>
+                              </span>
+                            </div>
+                          )}
+                          {item.mealsIncluded && item.mealsIncluded.trim().toLowerCase() !== 'n/a' && (
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-bg/80 border border-dark-border/70 text-gray-400">
+                              <Utensils className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                              <span>
+                                Meals:{' '}
+                                <strong className="text-white font-medium">
+                                  {item.mealsIncluded.trim()}
+                                </strong>
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>

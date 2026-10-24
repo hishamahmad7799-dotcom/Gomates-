@@ -1,7 +1,8 @@
 export interface ItineraryItem {
   day: number;
   title: string;
-  description: string;
+  description?: string;
+  points?: string[];
   location?: string;
   highlights?: string[];
   stay?: string;

@@ -57,49 +57,60 @@ export const TRIPS_DATA: Trip[] = [
     itinerary: [
       {
         day: 0,
-        title: "Okay Tadaa Byee Aligarh!",
-        description:
-        "Assemble at the designated pickup point in Delhi \n Depart from Aligarh  towards Shangarh by volvo \n Enjoy the overnight journey towards the mountains  ",
-        location: "Aligarh",
-        stay: " homestay/hotel/camps in Shangarh ",
+        title: "Departure from Aligarh / Delhi (Overnight Journey)",
+        points: [
+          "Assemble at the designated pickup point in Aligarh / Delhi",
+          "Meet your Trip Captain and fellow Gomates for the journey briefing",
+          "Board the comfortable AC vehicle / Volvo towards Shangarh",
+          "Enjoy icebreakers, music, and an overnight scenic drive into the mountains",
+        ],
+        location: "Aligarh / Delhi",
+        stay: "Overnight Travel",
       },
-      // {
-      //   day: 2,
-      //   title: "Reach Tirthan Valley",
-      //   description:
-      //     "Check-in to our homestay/hotel/camps and enjoy the view, Later leave for a small jungle trail to Jibhi waterfall, Mini Thailand and cafes..",
-      //   location: "Shoja / Jibhi",
-      //   stay: "Riverside Wooden Cottage in Jibhi",
-      //   mealsIncluded: "Breakfast, Dinner",
-      // },
       {
         day: 1,
-        title: " ARRIVAL IN SHANGARH ",
-      
-        description:
-          "Arrive at the Homestay in the morning & Have Breakfast.\n Check-in and freshen up Some time is offered for relaxing and acclimatization \n Visit the beautiful Shangarh Meadows \n Explore the peaceful local village and surrounding landscapes \n Visit Shangchul Mahadev Temple \n Dinner and overnight stay in Shangarh",
-        location: "Jalori Pass ",
-        stay: "Riverside Wooden Cottage in Jibhi",
+        title: "Arrival in Shangarh & Meadows Exploration",
+        points: [
+          "Arrive at the homestay in Shangarh in the morning & enjoy a freshly prepared breakfast",
+          "Check-in, freshen up, and take time for relaxation and mountain acclimatization",
+          "Visit the iconic Shangarh Meadows surrounded by tall pine and deodar forests",
+          "Explore the peaceful local village, apple orchards, and picturesque valley viewpoints",
+          "Visit the historic and sacred Shangchul Mahadev Temple",
+          "Gather for a warm group dinner and overnight stay in Shangarh",
+        ],
+        location: "Shangarh",
+        stay: "Homestay / Hotel in Shangarh",
         mealsIncluded: "Breakfast, Dinner",
       },
       {
         day: 2,
-        title: "SHANGARH → JIBHI",
-        description:
-        "Wake up and enjoy breakfast at the accommodation \n Check out from Shangarh \n Proceed towards Jibhi through scenic mountain roads \n Arrive in Jibhi and check in to the accommodation \n Proceed towards Jalori Pass for a scenic mountain excursion \n Enjoy panoramic Himalayan views and explore the surroundings \n 360 Degree View Point short nature walk around Jalori Pass, subject to weather",
-        
-        location: " Aligarh Drop off",
-        stay: "N/A",
-        mealsIncluded: "Breakfast",
+        title: "Shangarh → Jibhi & Jalori Pass Excursion",
+        points: [
+          "Wake up to fresh mountain air and enjoy breakfast at the accommodation",
+          "Check out from Shangarh and proceed towards Jibhi through scenic mountain roads",
+          "Arrive in Jibhi and check into cozy riverside wooden cottages",
+          "Proceed towards Jalori Pass (10,800 ft) for a panoramic mountain excursion",
+          "Enjoy 360-degree views of snow-dusted peaks from the viewpoint",
+          "Take a short nature walk around Jalori Pass & Serolsar Lake trail (subject to weather)",
+          "Return to Jibhi in the evening for dinner and overnight stay in wooden cottages",
+        ],
+        location: "Jibhi & Jalori Pass",
+        stay: "Riverside Wooden Cottage in Jibhi",
+        mealsIncluded: "Breakfast, Dinner",
       },
       {
         day: 3,
-        title: "JIBHI -> ALIGARH ",
-        description:
-        " Open your eyes with beautiful mountains in front, relax your body, and have your complimentary Breakfast early in the morning to avoid chaos \n  Later leave for a small jungle trail to Jibhi waterfall, Mini Thailand and cafes \n Guests should be ready at the designated departure point by 2:45 PM \n We'll reach Aligarh the next morning \n Bye Guys! Vaada karo milte rahoge and touch mein rahoge.",
-        
-        location: " Aligarh Drop off",
-        stay: "N/A",
+        title: "Jibhi Waterfalls, Cafes & Return Journey to Aligarh",
+        points: [
+          "Wake up to soothing river sounds and savor a complimentary early breakfast",
+          "Trek along an easy pine forest trail to Jibhi Waterfall and Mini Thailand",
+          "Relax and soak in the vibrant cafe culture with local food and mountain views",
+          "Regroup at the designated departure point by 2:45 PM for departure",
+          "Begin the overnight return journey towards Aligarh",
+          "Arrive in Aligarh the next morning with lifelong memories and friends",
+        ],
+        location: "Jibhi Drop-off to Aligarh",
+        stay: "Overnight Travel",
         mealsIncluded: "Breakfast",
       },
     ],
@@ -195,8 +206,13 @@ export const TRIPS_DATA: Trip[] = [
       {
         day: 1,
         title: "Arrival in Udaipur & Lake Pichola Sunset Cruise",
-        description:
-          "Arrive in Udaipur. Check into a heritage lake-view hotel. Evening sunset boat ride on Lake Pichola surrounded by Aravalli hills and glowing palaces.",
+        points: [
+          "Arrive in Udaipur and check into a heritage lake-view hotel",
+          "Freshen up, relax, and soak in the royal Mewar ambiance",
+          "Evening sunset boat cruise on Lake Pichola surrounded by Aravalli hills",
+          "Marvel at the illuminated Jag Mandir and Lake Palace from the water",
+          "Enjoy a welcome dinner and comfortable overnight stay in Udaipur",
+        ],
         location: "Udaipur",
         stay: "Heritage Hotel near Lake Pichola",
         mealsIncluded: "Dinner",
@@ -204,8 +220,14 @@ export const TRIPS_DATA: Trip[] = [
       {
         day: 2,
         title: "Udaipur City Palace, Jagdish Temple & Bagore Ki Haveli",
-        description:
-          "Explore grand City Palace complex, Jagdish Temple, and Saheliyon Ki Bari gardens. Evening folk dance performance at Bagore Ki Haveli.",
+        points: [
+          "Enjoy a royal morning breakfast overlooking the lakes",
+          "Explore the grand City Palace complex and historic museum",
+          "Visit the 17th-century Jagdish Temple and royal fountains at Saheliyon Ki Bari",
+          "Witness the vibrant Dharohar folk dance and cultural show at Bagore Ki Haveli",
+          "Stroll through the old city bazaars for traditional handicrafts",
+          "Overnight stay at your heritage hotel in Udaipur",
+        ],
         location: "Udaipur",
         stay: "Heritage Hotel near Lake Pichola",
         mealsIncluded: "Breakfast, Dinner",
@@ -213,8 +235,13 @@ export const TRIPS_DATA: Trip[] = [
       {
         day: 3,
         title: "Kumbhalgarh Fort Excursion & Monsoon Palace",
-        description:
-          "Day drive through Aravalli hills to Kumbhalgarh Fort. Walk the historic ramparts. Return to Udaipur for sunset views from Sajjangarh Monsoon Palace.",
+        points: [
+          "Early morning breakfast before setting off into the Aravalli hills",
+          "Day drive to the majestic UNESCO World Heritage Kumbhalgarh Fort",
+          "Walk the historic ramparts of the world's second-longest continuous wall",
+          "Return to Udaipur to catch panoramic golden-hour views from Sajjangarh Monsoon Palace",
+          "Authentic Rajasthani Thali dinner and overnight stay in Udaipur",
+        ],
         location: "Kumbhalgarh / Udaipur",
         stay: "Heritage Hotel in Udaipur",
         mealsIncluded: "Breakfast, Dinner",
@@ -222,8 +249,11 @@ export const TRIPS_DATA: Trip[] = [
       {
         day: 4,
         title: "Fateh Sagar Lake & Departure",
-        description:
-          "Morning breakfast and chill by Fateh Sagar Lake. Shopping for leather goods, miniature paintings, and silver jewelry before departure.",
+        points: [
+          "Relaxed morning breakfast and leisurely stroll along Fateh Sagar Lake",
+          "Souvenir shopping for handcrafted leather goods, miniature paintings, and silver jewelry",
+          "Transfer to Udaipur Railway Station / Airport with wonderful memories",
+        ],
         location: "Udaipur Railway Station / Airport",
         stay: "N/A",
         mealsIncluded: "Breakfast",
@@ -310,8 +340,13 @@ export const TRIPS_DATA: Trip[] = [
       {
         day: 1,
         title: "Aligarh to Manali Overnight Journey & Acclimatization",
-        description:
-          "Begin your Himalayan adventure with an overnight journey from Aligarh to Manali. On arrival, settle into your stay and relax. Spend the afternoon exploring Solang Valley, acclimatizing to the mountain air, and completing a final gear check for the journey ahead.",
+        points: [
+          "Board the comfortable AC vehicle for the overnight drive from Aligarh to Manali",
+          "Arrive in Manali, check into the hotel, freshen up, and unwind",
+          "Afternoon excursion to Solang Valley for acclimatization to mountain altitudes",
+          "Mandatory gear check and safety briefing with your mountain lead",
+          "Warm buffet dinner and restful overnight stay in Manali",
+        ],
         location: "Manali",
         stay: "Accommodation in Manali",
         mealsIncluded: "Dinner",
@@ -319,28 +354,42 @@ export const TRIPS_DATA: Trip[] = [
       {
         day: 2,
         title: "Manali to Sissu via Atal Tunnel",
-        description:
-          "Begin the day with a scenic drive from Manali through the Atal Tunnel into the breathtaking Lahaul Valley. Arrive in Sissu and enjoy its waterfalls, mountain views, and peaceful Himalayan surroundings.",
+        points: [
+          "Wake up to snowy peaks and enjoy a hearty morning breakfast",
+          "Drive through the 9.02 km engineering marvel: Atal Tunnel",
+          "Enter the surreal, high-altitude landscape of Lahaul Valley",
+          "Arrive in postcard-perfect Sissu and visit the famous Sissu Waterfall",
+          "Explore willow groves, riverside trails, and enjoy a warm dinner & overnight stay in Sissu",
+        ],
         location: "Sissu",
         stay: "Accommodation in Sissu",
         mealsIncluded: "Breakfast, Dinner",
       },
       {
         day: 3,
-        title: "drive to shinkula pass ",
-        description:
-          "A breathtaking high-altitude drive from Sissu to Shinkula Pass, through rugged Lahaul valleys, glacial streams and dramatic Himalayan landscapes, reaching one of the region’s most spectacular mountain passes.",
-        location: "Shinkula pass",
-        stay: "ATB",
+        title: "Expedition Drive to Shinkula Pass",
+        points: [
+          "Early morning breakfast before embarking on the high-altitude expedition",
+          "Drive along the Bhaga River through Darcha into remote trans-Himalayan terrain",
+          "Ascend towards the snow-covered Shinkula Pass (~16,000 ft)",
+          "Witness pristine white glaciers, dramatic Himalayan vistas, and raw mountain beauty",
+          "Drive back down to the valley for a hot dinner and overnight stay",
+        ],
+        location: "Shinkula Pass",
+        stay: "Accommodation in Jispa / Sissu",
         mealsIncluded: "Breakfast, Dinner",
       },
       {
         day: 4,
-        title: "Manali Shopping & Overnight Drive to Aligarh",
-        description:
-          "Free morning for souvenir shopping in Manali market. Afternoon departure for Aligarh.",
-        location: "Aligarh Drop off",
-        stay: "N/A",
+        title: "Manali Shopping & Return Drive to Aligarh",
+        points: [
+          "Morning breakfast with panoramic valley views before returning to Manali",
+          "Free time for souvenir shopping on Manali Mall Road (shawls, local honey, handicrafts)",
+          "Afternoon departure for the overnight journey back to Aligarh",
+          "Arrive in Aligarh the next morning, wrapping up an epic Himalayan adventure",
+        ],
+        location: "Aligarh Drop-off",
+        stay: "Overnight Travel",
         mealsIncluded: "Breakfast",
       },
     ],
