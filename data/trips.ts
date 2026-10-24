@@ -56,13 +56,12 @@ export const TRIPS_DATA: Trip[] = [
     ],
     itinerary: [
       {
-        day: 1,
+        day: 0,
         title: "Okay Tadaa Byee Aligarh!",
         description:
-          "Overnight drive from Aligarh in a comfortable Urbania Traveler. Arrive in Shangarh by morning. Check into a Homestay , Explore Shangarh’s lush green meadows, ancient temples & serene Himalayan forests..",
-        location: "Shangarh",
+        "Assemble at the designated pickup point in Delhi \n Depart from Aligarh  towards Shangarh by volvo \n Enjoy the overnight journey towards the mountains  ",
+        location: "Aligarh",
         stay: " homestay/hotel/camps in Shangarh ",
-        mealsIncluded: " Breakfast, Dinner",
       },
       // {
       //   day: 2,
@@ -74,20 +73,31 @@ export const TRIPS_DATA: Trip[] = [
       //   mealsIncluded: "Breakfast, Dinner",
       // },
       {
-        day: 2,
-        title: " jibhi - Jalori and Raghupur Fort trek ",
+        day: 1,
+        title: " ARRIVAL IN SHANGARH ",
       
         description:
-          "Good morning Peeps! It’s Raghupur Fort day trek.",
+          "Arrive at the Homestay in the morning & Have Breakfast.\n Check-in and freshen up Some time is offered for relaxing and acclimatization \n Visit the beautiful Shangarh Meadows \n Explore the peaceful local village and surrounding landscapes \n Visit Shangchul Mahadev Temple \n Dinner and overnight stay in Shangarh",
         location: "Jalori Pass ",
         stay: "Riverside Wooden Cottage in Jibhi",
         mealsIncluded: "Breakfast, Dinner",
       },
       {
-        day: 3,
-        title: "Return to Aligarh",
+        day: 2,
+        title: "SHANGARH → JIBHI",
         description:
-          "Bye Guys! Vaada karo milte rahoge and touch mein rahoge..",
+        "Wake up and enjoy breakfast at the accommodation \n Check out from Shangarh \n Proceed towards Jibhi through scenic mountain roads \n Arrive in Jibhi and check in to the accommodation \n Proceed towards Jalori Pass for a scenic mountain excursion \n Enjoy panoramic Himalayan views and explore the surroundings \n 360 Degree View Point short nature walk around Jalori Pass, subject to weather",
+        
+        location: " Aligarh Drop off",
+        stay: "N/A",
+        mealsIncluded: "Breakfast",
+      },
+      {
+        day: 3,
+        title: "JIBHI -> ALIGARH ",
+        description:
+        " Open your eyes with beautiful mountains in front, relax your body, and have your complimentary Breakfast early in the morning to avoid chaos \n  Later leave for a small jungle trail to Jibhi waterfall, Mini Thailand and cafes \n Guests should be ready at the designated departure point by 2:45 PM \n We'll reach Aligarh the next morning \n Bye Guys! Vaada karo milte rahoge and touch mein rahoge.",
+        
         location: " Aligarh Drop off",
         stay: "N/A",
         mealsIncluded: "Breakfast",
