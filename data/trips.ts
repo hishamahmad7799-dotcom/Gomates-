@@ -2,20 +2,20 @@ import { Trip } from "@/types/trip";
 
 export const TRIPS_DATA: Trip[] = [
   {
-    id: "jibhi-tirthan-shoja-shangarh-2026",
-    slug: "jibhi-tirthan-shoja-shangarh",
-    name: "Jibhi, Tirthan Valley, Shoja & Shangarh",
-    location: "Jibhi, Tirthan Valley, Shoja & Shangarh, Himachal Pradesh",
+    id: "jibhi-tirthan-shoja-jalori-2026",
+    slug: "jibhi-tirthan-shoja-jalori",
+    name: "Jibhi, Tirthan Valley, Shoja & Jalori",
+    location: "Jibhi, Tirthan Valley, Shoja & Jalori , Himachal Pradesh",
     state: "Himachal Pradesh",
     shortDescription:
       "Discover cozy wooden hamlets in Jibhi, Tirthan river valley, Jalori Pass trek, and Meadows & Mountains.",
     description:
       "Escape into the serene green pine forests of Tirthan Valley and Banjar. Walk across wooden bridges in Jibhi, trek to crystal-clear Serolsar Lake via Jalori Pass (10,800 ft), stay in cozy wooden cottages, and explore the iconic Ridge and Meadows & Mountains.",
-    startDate: "Coming Soon",
-    endDate: "-",
+    startDate: "15 NOV 2026",
+    endDate: "18 NOV 2026",
     duration: "2 Nights • 3 Days",
-    price: 8499,
-    formattedPrice: "Coming Soon",
+    price: 7599,
+    formattedPrice: "Coming soon",
     currency: "INR",
     category: "Valley & Forest Trail",
     groupSize: "12-16  Gomates",
@@ -25,18 +25,18 @@ export const TRIPS_DATA: Trip[] = [
     costing: [
       {
         roomSharing: "Quad Sharing",
-        costPerPerson: "Coming Soon",
-        advanceToBook: "Coming Soon",
+        costPerPerson: "Coming soon",
+        advanceToBook: "Coming soon",
       },
       {
         roomSharing: "Triple Sharing",
-        costPerPerson: "Coming Soon",
-        advanceToBook: "Coming Soon",
+        costPerPerson: "Coming soon",
+        advanceToBook: "Coming soon",
       },
       {
         roomSharing: "Twin Sharing",
-        costPerPerson: "Coming Soon",
-        advanceToBook: "Coming Soon",
+        costPerPerson: "Coming soon",
+        advanceToBook: "Coming soon",
       },
     ],
     coverImage: "/images/jibhi/jibhi-11.jpg",
@@ -51,7 +51,7 @@ export const TRIPS_DATA: Trip[] = [
       "Trek to Serolsar Lake via Jalori Pass (10,800 ft)",
       "Hidden Jibhi Waterfall & wooden bridge river trail",
       "Riverside cottage stay in Tirthan Valley",
-      "Explore Shangarh’s lush green meadows, ancient temples & serene Himalayan forests.",
+      "Explore Raghupur Fort’s scenic forest trails, panoramic Himalayan peaks & the historic ruins of this hidden mountain gem.",
       
     ],
     itinerary: [
@@ -69,26 +69,23 @@ export const TRIPS_DATA: Trip[] = [
       },
       {
         day: 1,
-        title: "Arrival in Shangarh & Meadows Exploration",
+        title: "Arrival in Jibhi & Waterfall Exploration",
         points: [
-          "Arrive at the homestay in Shangarh in the morning & enjoy a freshly prepared breakfast",
-          "Check-in, freshen up, and take time for relaxation and mountain acclimatization",
-          "Visit the iconic Shangarh Meadows surrounded by tall pine and deodar forests",
-          "Explore the peaceful local village, apple orchards, and picturesque valley viewpoints",
-          "Visit the historic and sacred Shangchul Mahadev Temple",
-          "Gather for a warm group dinner and overnight stay in Shangarh",
+          "We will wish each other “Subahh Hogyii Yaar! Ab To Sojao xD, Kitni Der Mein Pahuchenge “ instead of Good morning.",
+          "Check-in to our homestay/hotel/camps and enjoy the view, Later leave for a small jungle trail to Jibhi waterfall, Mini Thailand and cafes.",
+          "Return back to the hotel in the evening and enjoy dance night.",
         ],
-        location: "Shangarh",
-        stay: "Homestay / Hotel in Shangarh",
+        location: "Jibhi",
+        stay: "Homestay / Hotel in Jibhi",
         mealsIncluded: "Breakfast, Dinner",
       },
       {
         day: 2,
-        title: "Shangarh → Jibhi & Jalori Pass Excursion",
+        title: "Jibhi → Jalori Pass Excursion",
         points: [
-          "Wake up to fresh mountain air and enjoy breakfast at the accommodation",
-          "Check out from Shangarh and proceed towards Jibhi through scenic mountain roads",
-          "Arrive in Jibhi and check into cozy riverside wooden cottages",
+          "Good morning Peeps! It’s Raghupur Fort day trek.",
+          "Have Breakfast and leave for Jalori Pass(the starting destination of the trek )",
+          "It’s a 4 Km trek and “Kasam se kaafi achaa  hai”. It will take around 2 hours",
           "Proceed towards Jalori Pass (10,800 ft) for a panoramic mountain excursion",
           "Enjoy 360-degree views of snow-dusted peaks from the viewpoint",
           "Take a short nature walk around Jalori Pass & Serolsar Lake trail (subject to weather)",
@@ -103,7 +100,6 @@ export const TRIPS_DATA: Trip[] = [
         title: "Jibhi Waterfalls, Cafes & Return Journey to Aligarh",
         points: [
           "Wake up to soothing river sounds and savor a complimentary early breakfast",
-          "Trek along an easy pine forest trail to Jibhi Waterfall and Mini Thailand",
           "Relax and soak in the vibrant cafe culture with local food and mountain views",
           "Regroup at the designated departure point by 2:45 PM for departure",
           "Begin the overnight return journey towards Aligarh",
