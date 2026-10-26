@@ -14,7 +14,7 @@ export const TRIPS_DATA: Trip[] = [
     startDate: "3 NOV 2026",
     endDate: "6 NOV 2026",
     duration: "2 Nights • 3 Days",
-    price: 7,599,
+    price: 7599,
     formattedPrice: "₹7,599",
     currency: "INR",
     category: "Valley & Forest Trail",
