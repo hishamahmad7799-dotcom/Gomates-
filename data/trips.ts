@@ -15,7 +15,7 @@ export const TRIPS_DATA: Trip[] = [
     endDate: "6 NOV 2026",
     duration: "2 Nights • 3 Days",
     price: 7599,
-    formattedPrice: "7599",
+    formattedPrice: "₹7599",
     currency: "INR",
     category: "Valley & Forest Trail",
     groupSize: "12-16  Gomates",
@@ -25,18 +25,18 @@ export const TRIPS_DATA: Trip[] = [
     costing: [
       {
         roomSharing: "Quad Sharing",
-        costPerPerson: "7599",
-        advanceToBook: "1999",
+        costPerPerson: "₹7599",
+        advanceToBook: "₹1999",
       },
       {
         roomSharing: "Triple Sharing",
-        costPerPerson: "7999",
-        advanceToBook: "1999",
+        costPerPerson: "₹7999",
+        advanceToBook: "₹1999",
       },
       {
         roomSharing: "Twin sharing",
-        costPerPerson: "8599",
-        advanceToBook: "1999",
+        costPerPerson: "₹8599",
+        advanceToBook: "₹1999",
       },
     ],
     coverImage: "/images/jibhi/jibhi-11.jpg",
