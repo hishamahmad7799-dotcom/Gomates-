@@ -97,10 +97,11 @@ export const TRIPS_DATA: Trip[] = [
       },
       {
         day: 3,
-        title: "Shoja Cafes & Return Journey to Aligarh",
+        title: "Balu nag temple / Bahu village & Return Journey to Aligarh",
         points: [
           "Wake up to soothing river sounds and savor a complimentary early breakfast",
-          "Relax and soak in the vibrant cafe culture with local food and mountain views",
+          "Visit the sacred Balu Nag Temple and admire its traditional Himachali wooden architecture.",
+          "Explore the peaceful surroundings of Bahu Village and experience authentic Himalayan village life.",
           "Regroup at the designated departure point by 2:45 PM for departure",
           "Begin the overnight return journey towards Aligarh",
           "Arrive in Aligarh the next morning with lifelong memories and friends",
