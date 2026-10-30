@@ -38,6 +38,7 @@ export interface Trip {
   gallery: string[];
   highlights: string[];
   itinerary: ItineraryItem[];
+  itineraryPdf?: string;
   included: string[];
   excluded: string[];
   faqs: FAQItem[];

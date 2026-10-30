@@ -57,14 +57,14 @@ export const TRIPS_DATA: Trip[] = [
     itinerary: [
       {
         day: 0,
-        title: "Departure from Aligarh / Delhi (Overnight Journey)",
+        title: "Okay Tadaa Bye Aligarh!",
         points: [
-          "Assemble at the designated pickup point in Aligarh / Delhi",
-          "Meet your Trip Captain and fellow Gomates for the journey briefing",
-          "Board the comfortable AC vehicle / Volvo towards Shangarh",
-          "Enjoy icebreakers, music, and an overnight scenic drive into the mountains",
+          "We will leave from Aligarh around 6pm in a luxury Urbania.",
+          "Refreshments like water bottles and eatables will be provided at the start of the journey.",
+          "Our first major stop will be for dinner.",
+          "Intro-session, Antakshri and Dumb charades during the journey.",
         ],
-        location: "Aligarh / Delhi",
+        location: "Aligarh Start",
         stay: "Overnight Travel",
       },
       {
@@ -111,6 +111,7 @@ export const TRIPS_DATA: Trip[] = [
         mealsIncluded: "Breakfast",
       },
     ],
+    itineraryPdf: "/itineraries/Gomates-Jibhi-Itinerary.pdf",
     included: [
       "Aligarh to Aligarh transportation in AC Urbania Traveler / SUV",
       "Accommodation for 2 nights 1 Night Shangarh + 1 Night Jibhi",

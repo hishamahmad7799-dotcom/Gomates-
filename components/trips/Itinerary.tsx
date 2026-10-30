@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { MapPin, BedDouble, Utensils, ChevronDown, ChevronUp } from 'lucide-react'
+import { MapPin, BedDouble, Utensils, ChevronDown, ChevronUp, Download } from 'lucide-react'
 import { Trip, ItineraryItem } from '@/types/trip'
 
 interface ItineraryProps {
@@ -84,6 +84,22 @@ export default function Itinerary({ trip }: ItineraryProps) {
     }
   }
 
+  const handlePrint = () => {
+    // Expand all days so full details appear in the print/PDF view
+    const allExpanded: Record<number, boolean> = {}
+    trip.itinerary.forEach((item) => {
+      allExpanded[item.day] = true
+    })
+    setExpandedDays(allExpanded)
+    setTimeout(() => {
+      window.print()
+    }, 200)
+  }
+
+  const downloadFileName = trip.itineraryPdf
+    ? `${trip.name.replace(/[^a-zA-Z0-9\s-]/g, '').trim()}-Itinerary.pdf`
+    : 'Gomates-Itinerary.pdf'
+
   return (
     <section className="py-20 bg-dark-surface border-t border-dark-border relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,12 +113,38 @@ export default function Itinerary({ trip }: ItineraryProps) {
             </h2>
           </div>
 
-          <button
-            onClick={toggleAll}
-            className="text-xs font-bold uppercase tracking-wider text-accent-primary hover:text-accent-secondary transition-colors underline underline-offset-4"
-          >
-            {areAllExpanded ? 'Collapse All Days' : 'Expand All Days'}
-          </button>
+          {/* Actions: Expand/Collapse & Download */}
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <button
+              onClick={toggleAll}
+              className="text-xs font-bold uppercase tracking-wider text-accent-primary hover:text-accent-secondary transition-colors underline underline-offset-4"
+            >
+              {areAllExpanded ? 'Collapse All Days' : 'Expand All Days'}
+            </button>
+
+            <span className="text-dark-border text-sm hidden sm:inline" aria-hidden="true">•</span>
+
+            {trip.itineraryPdf ? (
+              <a
+                href={trip.itineraryPdf}
+                download={downloadFileName}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-accent-primary hover:bg-accent-secondary text-white text-xs font-bold uppercase tracking-wider transition-all shadow-glow-accent hover:shadow-lg active:scale-95 group/btn"
+              >
+                <Download className="w-3.5 h-3.5 group-hover/btn:translate-y-0.5 transition-transform" />
+                <span>Download Itinerary</span>
+              </a>
+            ) : (
+              <button
+                onClick={handlePrint}
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-dark-elevated hover:bg-accent-primary border border-dark-border hover:border-accent-primary text-gray-200 hover:text-white text-xs font-bold uppercase tracking-wider transition-all active:scale-95 group/btn"
+              >
+                <Download className="w-3.5 h-3.5 group-hover/btn:translate-y-0.5 transition-transform" />
+                <span>Download Itinerary</span>
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Vertical Timeline */}
